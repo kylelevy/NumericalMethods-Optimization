@@ -29,17 +29,15 @@ PLU Decomposition is a modification of Gaussian Elimination which allows us to q
 
 The advantage to this decomposition is that if the A matrix remains the same, but the b vector is changed, we do not need to recompute the Gaussian Elimination. Instead we can take advantage of the properties of the $L$ and $U$ matricies to quickly find the solution of the new system.
 
-$$
-PA=LU \\
+$$PA=LU$$
 
-Ax=LUx=b \\
+$$Ax=LUx=b$$
 
-L(Ux) = b \\
+$$L(Ux) = b$$
 
-Lb' = b \\
+$$Lb' = b$$
 
-Ux = b' \\
-$$
+$$Ux = b'$$
 
 Instead of having to recompute $U$, we can instead apply the transformation used to obtain $U$, stored in $L$, to the new $b$ vector and denote it as $b'$. Now that we have $b'$, we can apply back substitution and solve right away.
 
